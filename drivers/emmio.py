@@ -287,7 +287,6 @@ class EMMIO(object):
     def read(self, address):
         return self.mmio.read(address)
 
-
     def _debug(self, s, *args):
         """The method provides debug capabilities for this class.
 
@@ -304,5 +303,6 @@ class EMMIO(object):
         """
         if self.debug:
             print('MMIO Debug: {0}'.format(s.format(*args)))
+
 
 

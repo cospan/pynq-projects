@@ -49,9 +49,12 @@ LAYER_OFFSET_PLANE2     =   0x04C
 LAYER_SIZE              =   0x100
 
 class VideoMixer(object):
-    def __init__(self, ip_obj, debug = False, width=1280, height=720):
-        base_addr = ip_obj["phys_addr"]
-        addr_length = ip_obj["addr_range"]
+
+    def __init__(self, name, debug = False, width=1280, height=720):
+        if name not in PL.ip_dict:
+            print ("No such %s" % name)
+        base_addr   = PL.ip_dict[name]["phys_addr"]
+        addr_length = PL.ip_dict[name]["addr_range"]
         self.debug = debug
         self.mmio = EMMIO(base_addr, addr_length, debug)
         self.width = width
@@ -72,7 +75,7 @@ class VideoMixer(object):
         self.mmio.enable_register_bit(REG_LAYER_ENABLE, BIT_LAYER_MASTER_EN, enable)
 
     def enable_layer(self, layer, enable):
-        self.mmio.enable_register_bit(REG_LAYER_ENABLE, layer, enable)
+        self.mmio.enable_register_bit(REG_LAYER_ENABLE, layer + 1, enable)
 
     def enable_overlay_layer(self, enable):
         self.mmio.enable_register_bit(REG_LAYER_ENABLE, BIT_LAYER_OVERLAY, enable)
@@ -88,50 +91,50 @@ class VideoMixer(object):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
         if stride is None:
             stride = width
-        self.mmio.write(addr_base + LAYER_OFFSET_ALPHA, alpha)
-        self.mmio.write(addr_base + LAYER_OFFSET_X, x)
-        self.mmio.write(addr_base + LAYER_OFFSET_Y, y)
-        self.mmio.write(addr_base + LAYER_OFFSET_WIDTH, width)
-        self.mmio.write(addr_base + LAYER_OFFSET_STRIDE, stride)
-        self.mmio.write(addr_base + LAYER_OFFSET_HEIGHT, height)
-        self.mmio.write(addr_base + LAYER_OFFSET_SCALE, scale)
-        self.mmio.write(addr_base + LAYER_OFFSET_PLANE1, plane1)
-        self.mmio.write(addr_base + LAYER_OFFSET_PLANE2, plane2)
+        self.mmio.write(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_ALPHA, alpha)
+        self.mmio.write(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_X, x)
+        self.mmio.write(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_Y, y)
+        self.mmio.write(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_WIDTH, width)
+        self.mmio.write(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_STRIDE, stride)
+        self.mmio.write(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_HEIGHT, height)
+        self.mmio.write(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_SCALE, scale)
+        self.mmio.write(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_PLANE1, plane1)
+        self.mmio.write(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_PLANE2, plane2)
 
     def get_layer_x(self, index):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
-        return self.mmio.read(addr_base + LAYER_OFFSET_X)
+        return self.mmio.read(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_X)
 
     def get_layer_y(self, index):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
-        return self.mmio.read(addr_base + LAYER_OFFSET_Y)
+        return self.mmio.read(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_Y)
 
     def get_layer_width(self, index):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
-        return self.mmio.read(addr_base + LAYER_OFFSET_WIDTH)
+        return self.mmio.read(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_WIDTH)
 
     def get_layer_stride(self, index):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
-        return self.mmio.read(addr_base + LAYER_OFFSET_STRIDE)
+        return self.mmio.read(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_STRIDE)
 
     def get_layer_height(self, index):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
-        return self.mmio.read(addr_base + LAYER_OFFSET_HEIGHT)
+        return self.mmio.read(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_HEIGHT)
 
     def get_layer_scale(self, index):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
-        return self.mmio.read(addr_base + LAYER_OFFSET_SCALE)
+        return self.mmio.read(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_SCALE)
 
     def get_layer_alpha(self, index):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
-        return self.mmio.read(addr_base + LAYER_OFFSET_ALPHA)
+        return self.mmio.read(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_ALPHA)
 
     def get_layer_plane1_addr(self, index):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
-        return self.mmio.read(addr_base + LAYER_OFFSET_PLANE1)
+        return self.mmio.read(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_PLANE1)
 
     def get_layer_plane2_addr(self, index):
         addr_base = LAYER_OFFSET_BASE + index * LAYER_SIZE
-        return self.mmio.read(addr_base + LAYER_OFFSET_PLANE2)
+        return self.mmio.read(addr_base + LAYER_OFFSET_BASE + LAYER_OFFSET_PLANE2)
 
 

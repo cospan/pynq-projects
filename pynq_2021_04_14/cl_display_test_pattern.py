@@ -15,7 +15,6 @@
 # You should have received a copy of the GNU General Public License
 # along with NAME; If not, see <http://www.gnu.org/licenses/>.
 
-
 import sys
 import os
 import argparse
@@ -25,12 +24,15 @@ from pynq import PL
 from pynq import Overlay
 from pynq.lib.video import *
 from pynq.lib.video.hierarchies import *
+
+sys.path.append(os.path.join(os.path.dirname(__file__), os.pardir))
+
 from drivers.video_mixer import VideoMixer
 from drivers.dynamic_clock import DynamicClock
 from drivers.timing_controller import TimingController
 from drivers.test_pattern_generator import TestPatternGenerator
-
-#sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), os.pardir)))
+from drivers.test_pattern_generator import TestPatternID
+from drivers.axi_graphics import AXIGraphics
 
 NAME = os.path.basename(os.path.realpath(__file__))
 
@@ -67,10 +69,7 @@ def main(argv):
     if args.debug:
         print ("test: %s" % str(args.test[0]))
 
-
     BF = os.path.join("./data/system_wrapper.bit")
-
-
 
     if not os.path.exists(BF):
         print ("%s Doesn't exist Exiting!!" % BF)
@@ -86,7 +85,7 @@ def main(argv):
     print ("Starting Video")
 
     print ("Configuring Timing Controller")
-    tc = TimingController(ol.ip_dict["video/timing_generator"])
+    tc = TimingController("video/timing_generator")
     tc.reset()
     while (not tc.is_reset_done()):
         print (".")
@@ -95,18 +94,29 @@ def main(argv):
     HEIGHT  = tc.get_generator_height()
     print ("Image Size (Retrieved from Timing Controller): %d x %d" % (WIDTH, HEIGHT))
     print ("Configuring Test Pattern Generator")
-    tpg = TestPatternGenerator(ol.ip_dict["video/v_tpg_0"], debug = args.debug)
+    tpg = TestPatternGenerator("video/v_tpg_0", debug = args.debug)
     tpg.set_image_size(WIDTH, HEIGHT)
     tpg.set_color_format_to_rgb()
-    tpg.set_color_bar_test_pattern()
+    #tpg.set_color_bar_test_pattern()
+    #tpg.set_test_pattern(TestPatternID.SOLID_RED)
+    #tpg.set_test_pattern(TestPatternID.SOLID_WHITE)
+    tpg.set_test_pattern(TestPatternID.SOLID_BLACK)
+    #tpg.set_test_pattern(TestPatternID.COLOR_BARS)
     tpg.start()
 
+    SUB_WIN_WIDTH = 640
+    SUB_WIN_HEIGHT = 480
+    #SUB_WIN_WIDTH = WIDTH
+    #SUB_WIN_HEIGHT = HEIGHT
+
     print ("Configuring Video Mixer")
-    vm = VideoMixer(ol.ip_dict["video/v_mix_0"], WIDTH, HEIGHT)
-    vm.configure_layer(0, 0, 0, WIDTH, HEIGHT)
+    vm = VideoMixer("video/v_mix_0", WIDTH, HEIGHT)
+    #vm.configure_layer(0, 0, 0, WIDTH, HEIGHT)
+    vm.configure_layer(1, 0, 0, SUB_WIN_WIDTH, SUB_WIN_HEIGHT)
+    vm.enable_layer(1, True)
     vm.configure_master_layer(WIDTH, HEIGHT)
-    #vm.configure_layer(1, 0, 0, WIDTH, HEIGHT)
     #vm.enable_overlay_layer(True)
+
 
     if args.debug: print ("Video Mixer Control Register Before Enable: 0x%08X" % vm.get_control())
     vm.start()
@@ -132,9 +142,35 @@ def main(argv):
     tc.enable(gen_enable = True, use_gen_src = True)
     if args.debug: print ("TC Control Register: 0x%08X" % tc.get_control_reg())
 
-
+    print ("Interfacing with AXI Graphics Controller: \n")
+    print ("%s" % str(ol.ip_dict["video/axi_graphics_0"]))
+    ag = AXIGraphics("video/axi_graphics_0", debug = args.debug)
+    #print ("AXI Graphics Started: %s" % str(ol.ip_dict["video/axi_graphics"]))
+    #time.sleep(0.1)
+    #time.sleep(5)
+    print ("AXI Graphics Control Register: 0x%08X" % ag.get_control())
+    #print ("AXI Graphics: 0x%08X" % ag.get_version())
+    ag.set_width(SUB_WIN_WIDTH)
+    ag.set_height(SUB_WIN_HEIGHT)
+    print ("Size: %d x %d" % (ag.get_width(), ag.get_height()))
+    #ag.set_mode(0)  # Black
+    #ag.set_mode(1)  # White
+    #ag.set_mode(2)  # Red
+    #ag.set_mode(3)  # Green
+    #ag.set_mode(4)  # Blue
+    #ag.set_mode(5)  # Color Bars
+    ag.set_mode(6)  # Block
+    #ag.set_mode(7)  # Ramp
+    ag.set_alpha(0xFF)
+    ag.set_ref0_xy(100, 100)
+    ag.set_ref1_xy(200, 200)
+    ag.set_interval(100)
+    ag.enable_rgba_format(True)
+    #ag.enable_rgba_format(False)
+    ag.enable(True)
+    print ("AXI Graphics Control Register: 0x%08X" % ag.get_control())
+    #print ("Sleeping for 5 seconds")
+    #time.sleep(5)
 
 if __name__ == "__main__":
     main(sys.argv)
-
-

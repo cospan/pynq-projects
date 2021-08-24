@@ -74,12 +74,40 @@ ID_DP_RANGE_CEA         = 0x01
 ID_DP_YUV_COEF_601      = 0x00
 ID_DP_YUV_COEF_709      = 0x01
 
+class TestPatternID(object):
+    PASS_THRU     = 0x00
+    HRAMP         = 0x01
+    VRAMP         = 0x02
+    TRAMP         = 0x03
+    SOLID_RED     = 0x04
+    SOLID_GREEN   = 0x05
+    SOLID_BLUE    = 0x06
+    SOLID_BLACK   = 0x07
+    SOLID_WHITE   = 0x08
+    COLOR_BARS    = 0x09
+    ZONE          = 0x0A
+    TCOLOR_BARS   = 0x0B
+    CROSS_HATCH   = 0x0C
+    COLOR_SWEEP   = 0x0D
+    VH_RAMP       = 0x0E
+    BW_CV         = 0x0F
+    PSRANDOM      = 0x10
+    DP_CRAMP      = 0x11
+    DP_BW_VLINES  = 0x12
+    DP_C_SQUARE   = 0x13
+
+
+
+
 
 class TestPatternGenerator(object):
 
-    def __init__(self, ip_obj, debug = False):
-        base_addr = ip_obj["phys_addr"]
-        addr_length = ip_obj["addr_range"]
+    def __init__(self, name, debug = False):
+        if name not in PL.ip_dict:
+            print ("No such %s" % name)
+
+        base_addr   = PL.ip_dict[name]["phys_addr"]
+        addr_length = PL.ip_dict[name]["addr_range"]
         self.debug = debug
         self.mmio = EMMIO(base_addr, addr_length, debug)
 
@@ -91,6 +119,9 @@ class TestPatternGenerator(object):
 
     def set_color_bar_test_pattern(self):
         self.mmio.write(REG_BG_PATTERN_ID, ID_BG_PAT_COLOR_BARS);
+
+    def set_test_pattern(self, pattern_id):
+        self.mmio.write(REG_BG_PATTERN_ID, pattern_id);
 
     def set_image_size(self, width, height):
         self.mmio.write(REG_ACTIVE_WIDTH, width)

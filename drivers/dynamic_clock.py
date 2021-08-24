@@ -220,9 +220,12 @@ class MODE_1920x1080:
 # Functions
 
 class DynamicClock(object):
-    def __init__(self, ip_obj, debug = False):
-        base_addr = ip_obj["phys_addr"]
-        addr_length = ip_obj["addr_range"]
+    def __init__(self, name, debug = False):
+        if name not in PL.ip_dict:
+            print ("No such %s" % name)
+
+        base_addr   = PL.ip_dict[name]["phys_addr"]
+        addr_length = PL.ip_dict[name]["addr_range"]
         self.debug = debug
         self.mmio = EMMIO(base_addr, addr_length, debug)
 
