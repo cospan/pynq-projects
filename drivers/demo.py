@@ -9,7 +9,8 @@ import time
 from array import array as Array
 
 REG_CONTROL             = 0  << 2
-REG_VERSION             = 1  << 2
+REG_DEMO                = 1  << 2
+REG_VERSION             = 2  << 2
 
 class Demo (object):
     def __init__(self, name, debug = False):
@@ -37,6 +38,15 @@ class Demo (object):
     # Get Entire Register
     def get_control(self):
         data = self.mmio.read(REG_CONTROL)
+        return data
+
+    # Set an entire Register
+    def set_demo(self, data):
+        self.mmio.write(REG_DEMO, data)
+
+    # Get Entire Register
+    def get_demo(self):
+        data = self.mmio.read(REG_DEMO)
         return data
 
 
