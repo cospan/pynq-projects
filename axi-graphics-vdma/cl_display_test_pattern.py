@@ -76,10 +76,15 @@ def main(argv):
 
     print ("Bitfile downloaded!")
 
-    print ("%s" % str(ol.ip_dict.keys()))
+    #print ("%s" % str(ol.ip_dict.keys()))
+
+    print ("Configure AXI Stream Routes")
     ai = AXISInterconnect("video/axis_interconnect_0/xbar")
     ai.set_route(0, 0)  # From VMIX To output screen
     #ai.set_route(0, 1) # From VMIX To VDMA
+
+    print ("Configure AXI VDMA")
+    #vdma_h2c = AxiVDMA(
 
 
     print ("Starting Video")
@@ -89,6 +94,7 @@ def main(argv):
     tc.reset()
     while (not tc.is_reset_done()):
         print (".")
+
 
     WIDTH   = tc.get_generator_width()
     HEIGHT  = tc.get_generator_height()
