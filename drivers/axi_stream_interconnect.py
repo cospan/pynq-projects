@@ -3,10 +3,7 @@ __author__ = "dmccoy@mit.edu (Dave McCoy)"
 from pynq import PL
 from .emmio import EMMIO
 
-
 from array import array as Array
-
-
 
 REG_CONTROL                 =   0 << 2
 REG_MASTER_MUX_START_BASE   =   0x040
@@ -32,7 +29,13 @@ class AXISInterconnect (object):
     def __del__(self):
         pass
 
+    def disable_all_routes(self):
+        for i in range(16):
+            self.mmio.write(REG_MASTER_MUX_START_BASE + 4 * i, DISABLE_MASK)
+        self.mmio.write(REG_CONTROL, CONTROL_UPDATE)
+
     def set_route(self, source_index, master_index):
+    #def set_route(self, master_index, source_index):
         self.mmio.write(REG_MASTER_MUX_START_BASE + 4 * master_index, source_index)
         self.mmio.write(REG_CONTROL, CONTROL_UPDATE)
 

@@ -65,6 +65,9 @@ class VideoMixer(object):
         #print ("Control: 0x%08X\n" % control)
         self.mmio.write(REG_CONTROL, control)
 
+    def stop(self):
+        control = 0x00
+
     def get_control(self):
         return self.mmio.read(REG_CONTROL)
 

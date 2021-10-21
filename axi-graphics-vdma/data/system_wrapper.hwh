@@ -1,59 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Oct 13 14:49:03 2021" VIVADOVERSION="2019.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Oct 19 23:02:16 2021" VIVADOVERSION="2019.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="tul.com.tw:pynq-z2:part0:1.0" DEVICE="7z020" NAME="system" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
   <EXTERNALPORTS>
-    <PORT DIR="I" LEFT="3" NAME="leds_4bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_0_gpio2_io_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="low_speed_axi_gpio_0" PORT="gpio2_io_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="leds_4bits_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_0_gpio2_io_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="low_speed_axi_gpio_0" PORT="gpio2_io_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="3" NAME="leds_4bits_tri_t" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_0_gpio2_io_t">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="low_speed_axi_gpio_0" PORT="gpio2_io_t"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_out_clk_p" SIGIS="clk" SIGNAME="video_hdmi_out_TMDS_Clk_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="video_hdmi_out" PORT="TMDS_Clk_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_out_clk_n" SIGIS="clk" SIGNAME="video_hdmi_out_TMDS_Clk_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="video_hdmi_out" PORT="TMDS_Clk_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_p" RIGHT="0" SIGIS="undef" SIGNAME="video_hdmi_out_TMDS_Data_p">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="video_hdmi_out" PORT="TMDS_Data_p"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_n" RIGHT="0" SIGIS="undef" SIGNAME="video_hdmi_out_TMDS_Data_n">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="video_hdmi_out" PORT="TMDS_Data_n"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" LEFT="5" NAME="rgb_led_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_2_gpio_io_i">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="low_speed_axi_gpio_2" PORT="gpio_io_i"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="5" NAME="rgb_led_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_2_gpio_io_o">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="low_speed_axi_gpio_2" PORT="gpio_io_o"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="O" LEFT="5" NAME="rgb_led_tri_t" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_2_gpio_io_t">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="low_speed_axi_gpio_2" PORT="gpio_io_t"/>
-      </CONNECTIONS>
-    </PORT>
     <PORT DIR="I" NAME="hdmi_out_hpd_led_tri_i" SIGIS="undef" SIGNAME="low_speed_axi_gpio_0_gpio_io_i">
       <CONNECTIONS>
         <CONNECTION INSTANCE="low_speed_axi_gpio_0" PORT="gpio_io_i"/>
@@ -69,14 +19,19 @@
         <CONNECTION INSTANCE="low_speed_axi_gpio_0" PORT="gpio_io_t"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="1" NAME="sws_2bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_1_gpio_io_i">
+    <PORT DIR="I" LEFT="5" NAME="rgb_led_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_2_gpio_io_i">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="low_speed_axi_gpio_1" PORT="gpio_io_i"/>
+        <CONNECTION INSTANCE="low_speed_axi_gpio_2" PORT="gpio_io_i"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" LEFT="3" NAME="btns_4bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_1_gpio2_io_i">
+    <PORT DIR="O" LEFT="5" NAME="rgb_led_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_2_gpio_io_o">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="low_speed_axi_gpio_1" PORT="gpio2_io_i"/>
+        <CONNECTION INSTANCE="low_speed_axi_gpio_2" PORT="gpio_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="5" NAME="rgb_led_tri_t" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_2_gpio_io_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="low_speed_axi_gpio_2" PORT="gpio_io_t"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
@@ -107,6 +62,11 @@
     <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="1" NAME="sws_2bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_1_gpio_io_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="low_speed_axi_gpio_1" PORT="gpio_io_i"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -182,6 +142,46 @@
     <PORT DIR="IO" LEFT="3" NAME="DDR_dqs_p" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_DQS">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DQS"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_out_clk_p" SIGIS="clk" SIGNAME="video_hdmi_out_TMDS_Clk_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="video_hdmi_out" PORT="TMDS_Clk_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT CLKFREQUENCY="100000000" DIR="O" NAME="hdmi_out_clk_n" SIGIS="clk" SIGNAME="video_hdmi_out_TMDS_Clk_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="video_hdmi_out" PORT="TMDS_Clk_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_p" RIGHT="0" SIGIS="undef" SIGNAME="video_hdmi_out_TMDS_Data_p">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="video_hdmi_out" PORT="TMDS_Data_p"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="2" NAME="hdmi_out_data_n" RIGHT="0" SIGIS="undef" SIGNAME="video_hdmi_out_TMDS_Data_n">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="video_hdmi_out" PORT="TMDS_Data_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="leds_4bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_0_gpio2_io_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="low_speed_axi_gpio_0" PORT="gpio2_io_i"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="leds_4bits_tri_o" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_0_gpio2_io_o">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="low_speed_axi_gpio_0" PORT="gpio2_io_o"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="leds_4bits_tri_t" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_0_gpio2_io_t">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="low_speed_axi_gpio_0" PORT="gpio2_io_t"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="btns_4bits_tri_i" RIGHT="0" SIGIS="undef" SIGNAME="low_speed_axi_gpio_1_gpio2_io_i">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="low_speed_axi_gpio_1" PORT="gpio2_io_i"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -626,6 +626,99 @@
             <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" NAME="S01_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S01_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="S02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="7" NAME="S02_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arlen"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arsize"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="S02_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arburst"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_arlock" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="3" NAME="S02_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arcache"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arprot"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_arregion" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S02_AXI_arqos" SIGIS="undef"/>
+        <PORT DIR="I" NAME="S02_AXI_arvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_arready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="63" NAME="S02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="S02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_rlast" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="S02_AXI_rvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="S02_AXI_rready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_awid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_AWID"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="31" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_AWADDR"/>
@@ -659,11 +752,6 @@
         <PORT DIR="I" LEFT="2" NAME="S00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_awprot">
           <CONNECTIONS>
             <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_AWPROT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S00_AXI_awregion" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_awregion">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_AWREGION"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="3" NAME="S00_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_awqos">
@@ -706,6 +794,11 @@
             <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_WREADY"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="2" NAME="S00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_BID"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="1" NAME="S00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_BRESP"/>
@@ -719,6 +812,11 @@
         <PORT DIR="I" LEFT="0" NAME="S00_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="S00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_arid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_ARID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="S00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_araddr">
@@ -756,11 +854,6 @@
             <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_ARPROT"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S00_AXI_arregion" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_arregion">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_ARREGION"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="I" LEFT="3" NAME="S00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_arqos">
           <CONNECTIONS>
             <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_ARQOS"/>
@@ -774,6 +867,11 @@
         <PORT DIR="O" LEFT="0" NAME="S00_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_arready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="S00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_rid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_RID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="63" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_rdata">
@@ -799,181 +897,6 @@
         <PORT DIR="I" LEFT="0" NAME="S00_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWLEN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M00_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWSIZE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M00_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWBURST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M00_AXI_awlock" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWLOCK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWCACHE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWPROT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awqos">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWQOS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_awready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_wlast" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WLAST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_wready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_BRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_bvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_bready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARLEN"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARSIZE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARBURST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="M00_AXI_arlock" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arlock">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARLOCK"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARCACHE"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARPROT"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arqos">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARQOS"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="63" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_rlast" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RLAST"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S01_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="S01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S01_AXI_awaddr">
@@ -1059,157 +982,59 @@
             <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="m_axi_s2mm_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="S01_AXI_araddr" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_arvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_arready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_rdata" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_rresp" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S01_AXI_rvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S01_AXI_rready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S02_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S02_AXI_awaddr" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_awvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S02_AXI_awready" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_wdata" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_wvalid" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S02_AXI_wready" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S02_AXI_bresp" SIGIS="undef"/>
-        <PORT DIR="O" NAME="S02_AXI_bvalid" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_bready" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="S02_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="7" NAME="S02_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arlen">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arlen"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arsize">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arsize"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="S02_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arburst">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arburst"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S02_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="3" NAME="S02_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arcache">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arcache"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="2" NAME="S02_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arprot">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arprot"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S02_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="I" NAME="S02_AXI_arvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S02_AXI_arready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="63" NAME="S02_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="1" NAME="S02_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S02_AXI_rlast" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rlast">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rlast"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="S02_AXI_rvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="S02_AXI_rready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S02_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="S00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_arid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_ARID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_awid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_AWID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="S00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_bid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_BID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="S00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_rid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="m_axi_mm_video1_RID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARID"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="2" NAME="M00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awid">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWID"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="5" NAME="M00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_bid">
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_BID"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWADDR"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="5" NAME="M00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rid">
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awlen" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awlen">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RID"/>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWLEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M00_AXI_awsize" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWSIZE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_awburst" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWBURST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_awlock" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWLOCK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awcache" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWCACHE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M00_AXI_awprot" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWPROT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_awqos" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWQOS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_awvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_awready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_AWREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="M00_AXI_wid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wid">
@@ -1217,10 +1042,141 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WID"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="63" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_wlast" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_wvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_wready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="M00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_BID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_bvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_bready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arlen" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arlen">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARLEN"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arsize" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arsize">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARSIZE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_arburst" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arburst">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARBURST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="1" NAME="M00_AXI_arlock" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arlock">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARLOCK"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arcache" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arcache">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARCACHE"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M00_AXI_arprot" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arprot">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARPROT"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_arqos" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arqos">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARQOS"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_arvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_arready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="5" NAME="M00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="63" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_rlast" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M00_AXI_rvalid" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_rready" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_M00_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="S_AXI_HP0_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="video_v_mix_0_m_axi_mm_video1" DATAWIDTH="64" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="S00_AXI_awid"/>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="S00_AXI_awaddr"/>
             <PORTMAP LOGICAL="AWLEN" PHYSICAL="S00_AXI_awlen"/>
             <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S00_AXI_awsize"/>
@@ -1228,7 +1184,6 @@
             <PORTMAP LOGICAL="AWLOCK" PHYSICAL="S00_AXI_awlock"/>
             <PORTMAP LOGICAL="AWCACHE" PHYSICAL="S00_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="S00_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="S00_AXI_awregion"/>
             <PORTMAP LOGICAL="AWQOS" PHYSICAL="S00_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="S00_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="S00_AXI_awready"/>
@@ -1237,9 +1192,11 @@
             <PORTMAP LOGICAL="WLAST" PHYSICAL="S00_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="S00_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="S00_AXI_wready"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="S00_AXI_bid"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="S00_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="S00_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="S00_AXI_bready"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="S00_AXI_arid"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="S00_AXI_araddr"/>
             <PORTMAP LOGICAL="ARLEN" PHYSICAL="S00_AXI_arlen"/>
             <PORTMAP LOGICAL="ARSIZE" PHYSICAL="S00_AXI_arsize"/>
@@ -1247,23 +1204,20 @@
             <PORTMAP LOGICAL="ARLOCK" PHYSICAL="S00_AXI_arlock"/>
             <PORTMAP LOGICAL="ARCACHE" PHYSICAL="S00_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="S00_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="S00_AXI_arregion"/>
             <PORTMAP LOGICAL="ARQOS" PHYSICAL="S00_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="S00_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="S00_AXI_arready"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="S00_AXI_rid"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="S00_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="S00_AXI_rresp"/>
             <PORTMAP LOGICAL="RLAST" PHYSICAL="S00_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="S00_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="S00_AXI_rready"/>
-            <PORTMAP LOGICAL="ARID" PHYSICAL="S00_AXI_arid"/>
-            <PORTMAP LOGICAL="AWID" PHYSICAL="S00_AXI_awid"/>
-            <PORTMAP LOGICAL="BID" PHYSICAL="S00_AXI_bid"/>
-            <PORTMAP LOGICAL="RID" PHYSICAL="S00_AXI_rid"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="control_MEM_INTERCONNECT_M00_AXI" DATAWIDTH="64" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="M00_AXI_awid"/>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M00_AXI_awaddr"/>
             <PORTMAP LOGICAL="AWLEN" PHYSICAL="M00_AXI_awlen"/>
             <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M00_AXI_awsize"/>
@@ -1274,14 +1228,17 @@
             <PORTMAP LOGICAL="AWQOS" PHYSICAL="M00_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M00_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M00_AXI_awready"/>
+            <PORTMAP LOGICAL="WID" PHYSICAL="M00_AXI_wid"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M00_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M00_AXI_wstrb"/>
             <PORTMAP LOGICAL="WLAST" PHYSICAL="M00_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M00_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M00_AXI_wready"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="M00_AXI_bid"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M00_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M00_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M00_AXI_bready"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="M00_AXI_arid"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
             <PORTMAP LOGICAL="ARLEN" PHYSICAL="M00_AXI_arlen"/>
             <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M00_AXI_arsize"/>
@@ -1292,16 +1249,12 @@
             <PORTMAP LOGICAL="ARQOS" PHYSICAL="M00_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M00_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M00_AXI_arready"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="M00_AXI_rid"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M00_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M00_AXI_rresp"/>
             <PORTMAP LOGICAL="RLAST" PHYSICAL="M00_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M00_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M00_AXI_rready"/>
-            <PORTMAP LOGICAL="ARID" PHYSICAL="M00_AXI_arid"/>
-            <PORTMAP LOGICAL="AWID" PHYSICAL="M00_AXI_awid"/>
-            <PORTMAP LOGICAL="BID" PHYSICAL="M00_AXI_bid"/>
-            <PORTMAP LOGICAL="RID" PHYSICAL="M00_AXI_rid"/>
-            <PORTMAP LOGICAL="WID" PHYSICAL="M00_AXI_wid"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="video_axi_vdma_c2h_M_AXI_S2MM" DATAWIDTH="64" NAME="S01_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -1325,45 +1278,10 @@
             <PORTMAP LOGICAL="BRESP" PHYSICAL="S01_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="S01_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="S01_AXI_bready"/>
-            <PORTMAP LOGICAL="ARADDR" PHYSICAL="S01_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="S01_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="S01_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="S01_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="S01_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="S01_AXI_arcache"/>
-            <PORTMAP LOGICAL="ARPROT" PHYSICAL="S01_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="S01_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="S01_AXI_arqos"/>
-            <PORTMAP LOGICAL="ARVALID" PHYSICAL="S01_AXI_arvalid"/>
-            <PORTMAP LOGICAL="ARREADY" PHYSICAL="S01_AXI_arready"/>
-            <PORTMAP LOGICAL="RDATA" PHYSICAL="S01_AXI_rdata"/>
-            <PORTMAP LOGICAL="RRESP" PHYSICAL="S01_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="S01_AXI_rlast"/>
-            <PORTMAP LOGICAL="RVALID" PHYSICAL="S01_AXI_rvalid"/>
-            <PORTMAP LOGICAL="RREADY" PHYSICAL="S01_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="video_axi_vdma_h2c_M_AXI_MM2S" DATAWIDTH="64" NAME="S02_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
-            <PORTMAP LOGICAL="AWADDR" PHYSICAL="S02_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="S02_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S02_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="S02_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="S02_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="S02_AXI_awcache"/>
-            <PORTMAP LOGICAL="AWPROT" PHYSICAL="S02_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="S02_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="S02_AXI_awqos"/>
-            <PORTMAP LOGICAL="AWVALID" PHYSICAL="S02_AXI_awvalid"/>
-            <PORTMAP LOGICAL="AWREADY" PHYSICAL="S02_AXI_awready"/>
-            <PORTMAP LOGICAL="WDATA" PHYSICAL="S02_AXI_wdata"/>
-            <PORTMAP LOGICAL="WSTRB" PHYSICAL="S02_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="S02_AXI_wlast"/>
-            <PORTMAP LOGICAL="WVALID" PHYSICAL="S02_AXI_wvalid"/>
-            <PORTMAP LOGICAL="WREADY" PHYSICAL="S02_AXI_wready"/>
-            <PORTMAP LOGICAL="BRESP" PHYSICAL="S02_AXI_bresp"/>
-            <PORTMAP LOGICAL="BVALID" PHYSICAL="S02_AXI_bvalid"/>
-            <PORTMAP LOGICAL="BREADY" PHYSICAL="S02_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="S02_AXI_araddr"/>
             <PORTMAP LOGICAL="ARLEN" PHYSICAL="S02_AXI_arlen"/>
             <PORTMAP LOGICAL="ARSIZE" PHYSICAL="S02_AXI_arsize"/>
@@ -1807,210 +1725,296 @@
             <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="M07_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_awaddr">
+        <PORT DIR="I" NAME="M08_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_awaddr"/>
+            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="M07_AXI_awprot" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_awvalid">
+        <PORT DIR="I" NAME="M08_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_awvalid"/>
+            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_awready">
+        <PORT DIR="I" NAME="M09_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_awready"/>
+            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M07_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_wdata">
+        <PORT DIR="I" NAME="M09_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_wdata"/>
+            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M07_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_wstrb">
+        <PORT DIR="I" NAME="M10_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_wstrb"/>
+            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_wvalid">
+        <PORT DIR="I" NAME="M10_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_wvalid"/>
+            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_wready">
+        <PORT DIR="O" LEFT="8" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_wready"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M07_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_bresp">
+        <PORT DIR="O" NAME="M04_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_bresp"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_bvalid">
+        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_bvalid"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_bready">
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_bready"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="15" NAME="M07_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_araddr">
+        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_araddr"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="2" NAME="M07_AXI_arprot" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_arvalid">
+        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_arvalid"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_arready">
+        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_arready"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M07_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_rdata">
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_rdata"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M07_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_rresp">
+        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_rresp"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M07_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_rvalid">
+        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_rvalid"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_rready">
+        <PORT DIR="O" LEFT="8" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_rready"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="12" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_awaddr">
+        <PORT DIR="O" NAME="M04_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_AWADDR"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M05_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_awvalid">
+        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_AWVALID"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_awready">
+        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_AWREADY"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_wdata">
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_WDATA"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_wstrb">
+        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_WSTRB"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M05_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_wvalid">
+        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_WVALID"/>
+            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_wready">
+        <PORT DIR="O" LEFT="8" NAME="M09_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_WREADY"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_bresp">
+        <PORT DIR="O" NAME="M09_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M09_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_BRESP"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_bvalid">
+        <PORT DIR="I" NAME="M09_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_BVALID"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_bready">
+        <PORT DIR="O" LEFT="31" NAME="M09_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_BREADY"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="12" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_araddr">
+        <PORT DIR="O" NAME="M09_AXI_wstrb" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M09_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_ARADDR"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M05_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_arvalid">
+        <PORT DIR="I" NAME="M09_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_ARVALID"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_arready">
+        <PORT DIR="I" LEFT="1" NAME="M09_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_ARREADY"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_rdata">
+        <PORT DIR="I" NAME="M09_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_RDATA"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_rresp">
+        <PORT DIR="O" NAME="M09_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_RRESP"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M05_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_rvalid">
+        <PORT DIR="O" LEFT="8" NAME="M09_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_RVALID"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_rready">
+        <PORT DIR="O" NAME="M09_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M09_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_RREADY"/>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M09_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M09_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M09_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M09_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M09_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="M06_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M06_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M06_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M06_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M06_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="7" NAME="M06_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M06_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M06_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M06_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M06_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M06_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_awid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_awaddr">
@@ -2063,6 +2067,11 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWREADY"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="11" NAME="S00_AXI_wid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_wid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WID"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="31" NAME="S00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_wdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WDATA"/>
@@ -2088,6 +2097,11 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WREADY"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="11" NAME="S00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BID"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="1" NAME="S00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BRESP"/>
@@ -2101,6 +2115,11 @@
         <PORT DIR="I" NAME="S00_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="11" NAME="S00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_arid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARID"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="S00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_araddr">
@@ -2153,6 +2172,11 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARREADY"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="11" NAME="S00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_rid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RID"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="S00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_rdata">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RDATA"/>
@@ -2176,196 +2200,6 @@
         <PORT DIR="I" NAME="S00_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M00_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="0" NAME="M00_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="0" NAME="M00_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="M06_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_AWADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_AWVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_AWREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M06_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_WDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M06_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_WSTRB"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_WVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_WREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M06_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_BRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_BVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_BREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="7" NAME="M06_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_ARADDR"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M06_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_ARVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_ARREADY"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M06_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_RDATA"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M06_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_RRESP"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M06_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M06_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_RVALID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M06_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_tpg_0" PORT="s_axi_CTRL_RREADY"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M01_AXI_awaddr">
@@ -2542,6 +2376,93 @@
             <CONNECTION INSTANCE="low_speed_axi_gpio_2" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="12" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_AWADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_AWVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_AWREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_WDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_WSTRB"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_WVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_WREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_BRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_BVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_BREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="12" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_ARADDR"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_ARVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_ARREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_RDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_RRESP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_RVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axi_CTRL_RREADY"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M02_AXI_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="low_speed_axi_gpio_1" PORT="s_axi_awaddr"/>
@@ -2629,117 +2550,261 @@
             <CONNECTION INSTANCE="low_speed_axi_gpio_1" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="8" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_awaddr">
+        <PORT DIR="O" LEFT="6" NAME="M10_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_awaddr"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_awlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_awvalid">
+        <PORT DIR="O" NAME="M10_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M10_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_awvalid"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_awready">
+        <PORT DIR="I" NAME="M10_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_awready"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_wdata">
+        <PORT DIR="O" LEFT="31" NAME="M10_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_wdata"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_wstrb">
+        <PORT DIR="O" NAME="M10_AXI_wstrb" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M10_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_wstrb"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_wlast" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_wvalid">
+        <PORT DIR="I" NAME="M10_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_wvalid"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_wready">
+        <PORT DIR="I" LEFT="1" NAME="M10_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_wready"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_bresp">
+        <PORT DIR="I" NAME="M10_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_bresp"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_bvalid">
+        <PORT DIR="O" NAME="M10_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_bvalid"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_bready">
+        <PORT DIR="O" LEFT="6" NAME="M10_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_bready"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="8" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_araddr">
+        <PORT DIR="O" NAME="M10_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M10_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_araddr"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_arlen" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arsize" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arburst" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arlock" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arcache" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arregion" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arqos" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_arvalid">
+        <PORT DIR="I" NAME="M10_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_arvalid"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_arready">
+        <PORT DIR="I" LEFT="31" NAME="M10_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_arready"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_rdata">
+        <PORT DIR="I" LEFT="1" NAME="M10_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_rdata"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_rresp">
+        <PORT DIR="I" NAME="M10_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_rresp"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M04_AXI_rlast" SIGIS="undef"/>
-        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_rvalid">
+        <PORT DIR="O" NAME="M10_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_rvalid"/>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI_rready">
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_timing_generator" PORT="s_axi_rready"/>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M08_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
+        <PORT DIR="O" NAME="M00_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_awvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M08_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_awready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M00_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_wvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_wready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_bvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_bready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M00_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M00_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_arvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_arready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M00_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M00_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="M00_AXI_rvalid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="M00_AXI_rready" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="M07_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M07_AXI_awprot" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M07_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M07_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M07_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M07_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M07_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="15" NAME="M07_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="M07_AXI_arprot" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M07_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M07_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="o_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M07_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_graphics_0" PORT="i_rready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="8" NAME="M08_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M08_AXI_awaddr">
@@ -2825,221 +2890,11 @@
             <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axi_lite_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M09_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M09_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="8" NAME="M09_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M09_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M09_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M09_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M09_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M09_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M09_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M09_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M09_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="8" NAME="M09_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M09_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M09_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M09_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M09_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M09_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M09_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M09_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="s_axi_lite_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M10_ACLK" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M10_ARESETN" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="6" NAME="M10_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M10_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M10_AXI_awvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M10_AXI_awready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M10_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M10_AXI_wstrb" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M10_AXI_wvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M10_AXI_wready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M10_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M10_AXI_bvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M10_AXI_bready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="6" NAME="M10_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M10_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M10_AXI_arvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M10_AXI_arready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M10_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M10_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M10_AXI_rvalid" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M10_AXI_rready" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_M10_AXI_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="11" NAME="S00_AXI_arid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_arid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_ARID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_awid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_AWID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="11" NAME="S00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_bid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_BID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="11" NAME="S00_AXI_rid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_rid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_RID"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="11" NAME="S00_AXI_wid" RIGHT="0" SIGIS="undef" SIGNAME="control_PERIPHERAL_INTERCONNECT_S00_AXI_wid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP0_WID"/>
-          </CONNECTIONS>
-        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="processing_system7_0_M_AXI_GP0" DATAWIDTH="32" NAME="S00_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="S00_AXI_awid"/>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="S00_AXI_awaddr"/>
             <PORTMAP LOGICAL="AWLEN" PHYSICAL="S00_AXI_awlen"/>
             <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S00_AXI_awsize"/>
@@ -3050,14 +2905,17 @@
             <PORTMAP LOGICAL="AWQOS" PHYSICAL="S00_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="S00_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="S00_AXI_awready"/>
+            <PORTMAP LOGICAL="WID" PHYSICAL="S00_AXI_wid"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="S00_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="S00_AXI_wstrb"/>
             <PORTMAP LOGICAL="WLAST" PHYSICAL="S00_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="S00_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="S00_AXI_wready"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="S00_AXI_bid"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="S00_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="S00_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="S00_AXI_bready"/>
+            <PORTMAP LOGICAL="ARID" PHYSICAL="S00_AXI_arid"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="S00_AXI_araddr"/>
             <PORTMAP LOGICAL="ARLEN" PHYSICAL="S00_AXI_arlen"/>
             <PORTMAP LOGICAL="ARSIZE" PHYSICAL="S00_AXI_arsize"/>
@@ -3068,16 +2926,12 @@
             <PORTMAP LOGICAL="ARQOS" PHYSICAL="S00_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="S00_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="S00_AXI_arready"/>
+            <PORTMAP LOGICAL="RID" PHYSICAL="S00_AXI_rid"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="S00_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="S00_AXI_rresp"/>
             <PORTMAP LOGICAL="RLAST" PHYSICAL="S00_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="S00_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="S00_AXI_rready"/>
-            <PORTMAP LOGICAL="ARID" PHYSICAL="S00_AXI_arid"/>
-            <PORTMAP LOGICAL="AWID" PHYSICAL="S00_AXI_awid"/>
-            <PORTMAP LOGICAL="BID" PHYSICAL="S00_AXI_bid"/>
-            <PORTMAP LOGICAL="RID" PHYSICAL="S00_AXI_rid"/>
-            <PORTMAP LOGICAL="WID" PHYSICAL="S00_AXI_wid"/>
           </PORTMAPS>
         </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="control_PERIPHERAL_INTERCONNECT_M00_AXI" DATAWIDTH="32" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
@@ -3175,38 +3029,22 @@
         <BUSINTERFACE BUSNAME="control_PERIPHERAL_INTERCONNECT_M04_AXI" DATAWIDTH="32" NAME="M04_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M04_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M04_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M04_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M04_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M04_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M04_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M04_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M04_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M04_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M04_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M04_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M04_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M04_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M04_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M04_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M04_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M04_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M04_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M04_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M04_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M04_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M04_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M04_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M04_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M04_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M04_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M04_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M04_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M04_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M04_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M04_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M04_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M04_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M04_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M04_AXI_rready"/>
           </PORTMAPS>
@@ -3214,38 +3052,22 @@
         <BUSINTERFACE BUSNAME="control_PERIPHERAL_INTERCONNECT_M05_AXI" DATAWIDTH="32" NAME="M05_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M05_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M05_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M05_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M05_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M05_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M05_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M05_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M05_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M05_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M05_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M05_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M05_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M05_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M05_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M05_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M05_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M05_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M05_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M05_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M05_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M05_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M05_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M05_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M05_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M05_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M05_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M05_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M05_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M05_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M05_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M05_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M05_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M05_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M05_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M05_AXI_rready"/>
           </PORTMAPS>
@@ -3253,38 +3075,22 @@
         <BUSINTERFACE BUSNAME="control_PERIPHERAL_INTERCONNECT_M06_AXI" DATAWIDTH="32" NAME="M06_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M06_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M06_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M06_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M06_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M06_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M06_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M06_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M06_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M06_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M06_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M06_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M06_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M06_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M06_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M06_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M06_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M06_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M06_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M06_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M06_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M06_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M06_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M06_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M06_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M06_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M06_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M06_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M06_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M06_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M06_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M06_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M06_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M06_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M06_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M06_AXI_rready"/>
           </PORTMAPS>
@@ -3292,38 +3098,22 @@
         <BUSINTERFACE BUSNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI" DATAWIDTH="32" NAME="M07_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="M07_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWLEN" PHYSICAL="M07_AXI_awlen"/>
-            <PORTMAP LOGICAL="AWSIZE" PHYSICAL="M07_AXI_awsize"/>
-            <PORTMAP LOGICAL="AWBURST" PHYSICAL="M07_AXI_awburst"/>
-            <PORTMAP LOGICAL="AWLOCK" PHYSICAL="M07_AXI_awlock"/>
-            <PORTMAP LOGICAL="AWCACHE" PHYSICAL="M07_AXI_awcache"/>
             <PORTMAP LOGICAL="AWPROT" PHYSICAL="M07_AXI_awprot"/>
-            <PORTMAP LOGICAL="AWREGION" PHYSICAL="M07_AXI_awregion"/>
-            <PORTMAP LOGICAL="AWQOS" PHYSICAL="M07_AXI_awqos"/>
             <PORTMAP LOGICAL="AWVALID" PHYSICAL="M07_AXI_awvalid"/>
             <PORTMAP LOGICAL="AWREADY" PHYSICAL="M07_AXI_awready"/>
             <PORTMAP LOGICAL="WDATA" PHYSICAL="M07_AXI_wdata"/>
             <PORTMAP LOGICAL="WSTRB" PHYSICAL="M07_AXI_wstrb"/>
-            <PORTMAP LOGICAL="WLAST" PHYSICAL="M07_AXI_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="M07_AXI_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="M07_AXI_wready"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="M07_AXI_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="M07_AXI_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="M07_AXI_bready"/>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="M07_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARLEN" PHYSICAL="M07_AXI_arlen"/>
-            <PORTMAP LOGICAL="ARSIZE" PHYSICAL="M07_AXI_arsize"/>
-            <PORTMAP LOGICAL="ARBURST" PHYSICAL="M07_AXI_arburst"/>
-            <PORTMAP LOGICAL="ARLOCK" PHYSICAL="M07_AXI_arlock"/>
-            <PORTMAP LOGICAL="ARCACHE" PHYSICAL="M07_AXI_arcache"/>
             <PORTMAP LOGICAL="ARPROT" PHYSICAL="M07_AXI_arprot"/>
-            <PORTMAP LOGICAL="ARREGION" PHYSICAL="M07_AXI_arregion"/>
-            <PORTMAP LOGICAL="ARQOS" PHYSICAL="M07_AXI_arqos"/>
             <PORTMAP LOGICAL="ARVALID" PHYSICAL="M07_AXI_arvalid"/>
             <PORTMAP LOGICAL="ARREADY" PHYSICAL="M07_AXI_arready"/>
             <PORTMAP LOGICAL="RDATA" PHYSICAL="M07_AXI_rdata"/>
             <PORTMAP LOGICAL="RRESP" PHYSICAL="M07_AXI_rresp"/>
-            <PORTMAP LOGICAL="RLAST" PHYSICAL="M07_AXI_rlast"/>
             <PORTMAP LOGICAL="RVALID" PHYSICAL="M07_AXI_rvalid"/>
             <PORTMAP LOGICAL="RREADY" PHYSICAL="M07_AXI_rready"/>
           </PORTMAPS>
@@ -3409,7 +3199,7 @@
             <REGISTER NAME="ISR">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Status Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x0"/>
-              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -3422,14 +3212,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="IPR">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Pending Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x4"/>
-              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-only"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -3442,14 +3232,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="IER">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Enable Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x8"/>
-              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -3462,14 +3252,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="IAR">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Acknowledge Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0xC"/>
-              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="write-only"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -3482,14 +3272,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="SIE">
               <PROPERTY NAME="DESCRIPTION" VALUE="Set Interrupt Enables"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x10"/>
-              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -3502,14 +3292,14 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
             <REGISTER NAME="CIE">
               <PROPERTY NAME="DESCRIPTION" VALUE="Clear Interrupt Enables"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x14"/>
-              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="true"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -3522,7 +3312,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -3579,7 +3369,7 @@
             <REGISTER NAME="IMR">
               <PROPERTY NAME="DESCRIPTION" VALUE="Interrupt Mode Register"/>
               <PROPERTY NAME="ADDRESS_OFFSET" VALUE="0x20"/>
-              <PROPERTY NAME="SIZE" VALUE="1"/>
+              <PROPERTY NAME="SIZE" VALUE="3"/>
               <PROPERTY NAME="ACCESS" VALUE="read-write"/>
               <PROPERTY NAME="IS_ENABLED" VALUE="false"/>
               <PROPERTY NAME="RESET_VALUE" VALUE="0x0"/>
@@ -3592,7 +3382,7 @@
                   <PROPERTY NAME="WRITE_CONSTRAINT" VALUE="0"/>
                   <PROPERTY NAME="READ_ACTION" VALUE=""/>
                   <PROPERTY NAME="BIT_OFFSET" VALUE="0"/>
-                  <PROPERTY NAME="BIT_WIDTH" VALUE="1"/>
+                  <PROPERTY NAME="BIT_WIDTH" VALUE="3"/>
                 </FIELD>
               </FIELDS>
             </REGISTER>
@@ -4904,9 +4694,9 @@
         <PARAMETER NAME="C_INSTANCE" VALUE="system_axi_intc_0_0"/>
         <PARAMETER NAME="C_S_AXI_ADDR_WIDTH" VALUE="9"/>
         <PARAMETER NAME="C_S_AXI_DATA_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_NUM_INTR_INPUTS" VALUE="1"/>
+        <PARAMETER NAME="C_NUM_INTR_INPUTS" VALUE="3"/>
         <PARAMETER NAME="C_NUM_SW_INTR" VALUE="0"/>
-        <PARAMETER NAME="C_KIND_OF_INTR" VALUE="0xfffffffe"/>
+        <PARAMETER NAME="C_KIND_OF_INTR" VALUE="0xfffffff8"/>
         <PARAMETER NAME="C_KIND_OF_EDGE" VALUE="0xFFFFFFFF"/>
         <PARAMETER NAME="C_KIND_OF_LVL" VALUE="0xFFFFFFFF"/>
         <PARAMETER NAME="C_ASYNC_INTR" VALUE="0xFFFFFFFF"/>
@@ -5033,7 +4823,7 @@
             <CONNECTION INSTANCE="control_PERIPHERAL_INTERCONNECT" PORT="M00_AXI_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="intr" RIGHT="0" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="control_interrupt_concat1_dout">
+        <PORT DIR="I" LEFT="2" NAME="intr" RIGHT="0" SENSITIVITY="LEVEL_HIGH:LEVEL_HIGH:LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="control_interrupt_concat1_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="control_interrupt_concat1" PORT="dout"/>
           </CONNECTIONS>
@@ -5141,8 +4931,8 @@
         <PARAMETER NAME="IN29_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN30_WIDTH" VALUE="1"/>
         <PARAMETER NAME="IN31_WIDTH" VALUE="1"/>
-        <PARAMETER NAME="dout_width" VALUE="1"/>
-        <PARAMETER NAME="NUM_PORTS" VALUE="1"/>
+        <PARAMETER NAME="dout_width" VALUE="3"/>
+        <PARAMETER NAME="NUM_PORTS" VALUE="3"/>
         <PARAMETER NAME="Component_Name" VALUE="system_interrupt_concat_0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
@@ -5152,7 +4942,17 @@
             <CONNECTION INSTANCE="video_v_mix_0" PORT="interrupt"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="control_interrupt_concat1_dout">
+        <PORT DIR="I" LEFT="0" NAME="In1" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_mm2s_introut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="mm2s_introut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="In2" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s2mm_introut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s2mm_introut"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="dout" RIGHT="0" SIGIS="undef" SIGNAME="control_interrupt_concat1_dout">
           <CONNECTIONS>
             <CONNECTION INSTANCE="control_axi_interrupt_0" PORT="intr"/>
           </CONNECTIONS>
@@ -8148,7 +7948,7 @@
         <PARAMETER NAME="C_SLOT_15_APC_STS_EN" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_0_APC_EN" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_1_APC_EN" VALUE="1"/>
-        <PARAMETER NAME="C_SLOT_2_APC_EN" VALUE="0"/>
+        <PARAMETER NAME="C_SLOT_2_APC_EN" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_3_APC_EN" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_4_APC_EN" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_5_APC_EN" VALUE="0"/>
@@ -8306,7 +8106,7 @@
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WLAST_TO_AWVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_WRITE_TO_BVALID_WAITS" VALUE="0"/>
         <PARAMETER NAME="C_SLOT_15_APC_MAX_CONTINUOUS_RTRANSFERS_WAITS" VALUE="0"/>
-        <PARAMETER NAME="C_BRAM_CNT" VALUE="6"/>
+        <PARAMETER NAME="C_BRAM_CNT" VALUE="5.5"/>
         <PARAMETER NAME="C_SLOT_0_AXI_AW_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_W_SEL_DATA" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_B_SEL_DATA" VALUE="1"/>
@@ -11665,7 +11465,7 @@
         <PARAMETER NAME="EN_BRAM_DRC" VALUE="TRUE"/>
         <PARAMETER NAME="ALL_PROBE_SAME_MU" VALUE="TRUE"/>
         <PARAMETER NAME="ALL_PROBE_SAME_MU_CNT" VALUE="2"/>
-        <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="2"/>
+        <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="3"/>
         <PARAMETER NAME="C_SLOT_0_AXI_ARUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_RUSER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_SLOT_0_AXI_AWUSER_WIDTH" VALUE="1"/>
@@ -11694,7 +11494,7 @@
         <PARAMETER NAME="C_SLOT_1_AXIS_TDEST_WIDTH" VALUE="AUTO"/>
         <PARAMETER NAME="C_SLOT_0_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_1_INTF_TYPE" VALUE="xilinx.com:interface:axis_rtl:1.0"/>
-        <PARAMETER NAME="C_SLOT_2_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
+        <PARAMETER NAME="C_SLOT_2_INTF_TYPE" VALUE="xilinx.com:interface:axis_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_3_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_4_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
         <PARAMETER NAME="C_SLOT_5_INTF_TYPE" VALUE="xilinx.com:interface:aximm_rtl:1.0"/>
@@ -11920,7 +11720,7 @@
         <PORT DIR="I" LEFT="1" NAME="SLOT_0_AXI_rresp" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_0_AXI_rvalid" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_0_AXI_rready" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="31" NAME="SLOT_1_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="23" NAME="SLOT_1_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_1_AXIS_tlast" SIGIS="undef"/>
         <PORT DIR="I" LEFT="0" NAME="SLOT_1_AXIS_tuser" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" NAME="SLOT_1_AXIS_tvalid" SIGIS="undef"/>
@@ -11930,6 +11730,16 @@
             <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="2" NAME="SLOT_1_AXIS_tkeep" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="SLOT_1_AXIS_tid" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="SLOT_1_AXIS_tdest" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="SLOT_1_AXIS_tstrb" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="23" NAME="SLOT_2_AXIS_tdata" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="2" NAME="SLOT_2_AXIS_tkeep" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_2_AXIS_tlast" SIGIS="undef"/>
+        <PORT DIR="I" LEFT="0" NAME="SLOT_2_AXIS_tuser" RIGHT="0" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_2_AXIS_tvalid" SIGIS="undef"/>
+        <PORT DIR="I" NAME="SLOT_2_AXIS_tready" SIGIS="undef"/>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="control_PERIPHERAL_INTERCONNECT_M07_AXI" DATAWIDTH="32" NAME="SLOT_0_AXI" TYPE="MONITOR" VLNV="xilinx.com:interface:aximm:1.0">
@@ -11986,14 +11796,14 @@
             <PORTMAP LOGICAL="RREADY" PHYSICAL="SLOT_0_AXI_rready"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="video_axi_graphics_0_video" NAME="SLOT_1_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
-          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="4"/>
-          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
-          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+        <BUSINTERFACE BUSNAME="video_v_mix_0_m_axis_video" NAME="SLOT_1_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
-          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
@@ -12001,11 +11811,38 @@
           <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
+            <PORTMAP LOGICAL="TID" PHYSICAL="SLOT_1_AXIS_tid"/>
+            <PORTMAP LOGICAL="TDEST" PHYSICAL="SLOT_1_AXIS_tdest"/>
             <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_1_AXIS_tdata"/>
+            <PORTMAP LOGICAL="TSTRB" PHYSICAL="SLOT_1_AXIS_tstrb"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="SLOT_1_AXIS_tkeep"/>
             <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_1_AXIS_tlast"/>
             <PORTMAP LOGICAL="TUSER" PHYSICAL="SLOT_1_AXIS_tuser"/>
             <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_1_AXIS_tvalid"/>
             <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_1_AXIS_tready"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="video_axis_subset_converter_0_M_AXIS" NAME="SLOT_2_AXIS" TYPE="MONITOR" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/video/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="SLOT_2_AXIS_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="SLOT_2_AXIS_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="SLOT_2_AXIS_tlast"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="SLOT_2_AXIS_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="SLOT_2_AXIS_tvalid"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="SLOT_2_AXIS_tready"/>
           </PORTMAPS>
         </BUSINTERFACE>
       </BUSINTERFACES>
@@ -13763,7 +13600,7 @@
         <PARAMETER NAME="C_S2MM_SOF_ENABLE" VALUE="1"/>
         <PARAMETER NAME="C_INCLUDE_S2MM_DRE" VALUE="0"/>
         <PARAMETER NAME="C_INCLUDE_S2MM_SF" VALUE="1"/>
-        <PARAMETER NAME="C_S2MM_LINEBUFFER_DEPTH" VALUE="512"/>
+        <PARAMETER NAME="C_S2MM_LINEBUFFER_DEPTH" VALUE="2048"/>
         <PARAMETER NAME="C_S2MM_LINEBUFFER_THRESH" VALUE="4"/>
         <PARAMETER NAME="C_S2MM_MAX_BURST_LENGTH" VALUE="8"/>
         <PARAMETER NAME="C_M_AXI_S2MM_ADDR_WIDTH" VALUE="32"/>
@@ -13813,7 +13650,7 @@
         <PARAMETER NAME="c_s2mm_genlock_num_masters" VALUE="1"/>
         <PARAMETER NAME="c_mm2s_linebuffer_depth" VALUE="512"/>
         <PARAMETER NAME="c_mm2s_linebuffer_thresh" VALUE="4"/>
-        <PARAMETER NAME="c_s2mm_linebuffer_depth" VALUE="512"/>
+        <PARAMETER NAME="c_s2mm_linebuffer_depth" VALUE="2048"/>
         <PARAMETER NAME="c_s2mm_linebuffer_thresh" VALUE="4"/>
         <PARAMETER NAME="c_include_mm2s" VALUE="0"/>
         <PARAMETER NAME="c_mm2s_max_burst_length" VALUE="8"/>
@@ -14036,35 +13873,39 @@
         </PORT>
         <PORT DIR="I" LEFT="23" NAME="s_axis_s2mm_tdata" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tdata"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="s_axis_s2mm_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tkeep"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="m_axis_tkeep"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_axis_s2mm_tuser" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tuser">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tuser"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="m_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_s2mm_tvalid" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tvalid"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="s_axis_s2mm_tready" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tready"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="m_axis_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="s_axis_s2mm_tlast" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tlast"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="m_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s2mm_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="O" NAME="s2mm_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="video_axi_vdma_c2h_s2mm_introut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_interrupt_concat1" PORT="In2"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="control_PERIPHERAL_INTERCONNECT_M08_AXI" DATAWIDTH="32" NAME="S_AXI_LITE" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -14169,7 +14010,7 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="m_axi_s2mm_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_M_AXIS" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="video_axis_subset_converter_0_M_AXIS" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -15995,35 +15836,39 @@
         </PORT>
         <PORT DIR="O" LEFT="23" NAME="m_axis_mm2s_tdata" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TDATA"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="s_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="2" NAME="m_axis_mm2s_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TKEEP"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="s_axis_tkeep"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="0" NAME="m_axis_mm2s_tuser" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tuser">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TUSER"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="s_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_mm2s_tvalid" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TVALID"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" NAME="m_axis_mm2s_tready" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TREADY"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="s_axis_tready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="m_axis_mm2s_tlast" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TLAST"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="s_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="mm2s_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT"/>
+        <PORT DIR="O" NAME="mm2s_introut" SENSITIVITY="LEVEL_HIGH" SIGIS="INTERRUPT" SIGNAME="video_axi_vdma_h2c_mm2s_introut">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="control_interrupt_concat1" PORT="In1"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES>
         <BUSINTERFACE BUSNAME="control_PERIPHERAL_INTERCONNECT_M09_AXI" DATAWIDTH="32" NAME="S_AXI_LITE" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
@@ -16154,7 +15999,6 @@
       </MEMORYMAP>
       <PERIPHERALS>
         <PERIPHERAL INSTANCE="processing_system7_0"/>
-        <PERIPHERAL INSTANCE="video_v_mix_0"/>
       </PERIPHERALS>
     </MODULE>
     <MODULE COREREVISION="20" FULLNAME="/video/axis_interconnect_0/m00_couplers/auto_ss_k" HWVERSION="1.1" INSTANCE="video_axis_interconnect_0_m00_couplers_auto_ss_k" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
@@ -16627,34 +16471,34 @@
             <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="m_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tvalid">
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tvalid"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="s_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tready">
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tready"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="s_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tdata">
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tdata"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="s_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tkeep">
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tkeep"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="s_axis_tkeep"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tlast">
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tlast"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="s_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tuser">
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tuser">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tuser"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="s_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -16685,7 +16529,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_M_AXIS" NAME="M_AXIS" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
@@ -17404,6 +17248,338 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
+    <MODULE COREREVISION="20" FULLNAME="/video/axis_subset_converter_0" HWVERSION="1.1" INSTANCE="video_axis_subset_converter_0" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="https://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_subset_converter;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000010011011"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_M_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000010011011"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="S_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_TDEST_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TDEST_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="M_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="TDATA_REMAP" VALUE="tdata[15:8],tdata[7:0],tdata[23:16]"/>
+        <PARAMETER NAME="TUSER_REMAP" VALUE="tuser[0:0]"/>
+        <PARAMETER NAME="TID_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TDEST_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TKEEP_REMAP" VALUE="tkeep[2:0]"/>
+        <PARAMETER NAME="TSTRB_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TLAST_REMAP" VALUE="tlast[0]"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_axis_subset_converter_0_0"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axis_interconnect_0_m01_couplers_auto_ss_slidr" PORT="m_axis_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_c2h_s_axis_s2mm_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="s_axis_s2mm_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="video_axis_interconnect_0_m01_couplers_auto_ss_slidr_M_AXIS" NAME="S_AXIS" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/video/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="video_axis_subset_converter_0_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/video/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
+    <MODULE COREREVISION="20" FULLNAME="/video/axis_subset_converter_1" HWVERSION="1.1" INSTANCE="video_axis_subset_converter_1" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axis_subset_converter" VLNV="xilinx.com:ip:axis_subset_converter:1.1">
+      <DOCUMENTS>
+        <DOCUMENT SOURCE="https://www.xilinx.com/cgi-bin/docs/ipdoc?c=axis_subset_converter;v=v1_1;d=pg085-axi4stream-infrastructure.pdf"/>
+      </DOCUMENTS>
+      <PARAMETERS>
+        <PARAMETER NAME="C_FAMILY" VALUE="zynq"/>
+        <PARAMETER NAME="C_S_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_S_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_S_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000010011011"/>
+        <PARAMETER NAME="C_M_AXIS_TDATA_WIDTH" VALUE="24"/>
+        <PARAMETER NAME="C_M_AXIS_TID_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_TDEST_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_M_AXIS_SIGNAL_SET" VALUE="0b00000000000000000000000010011011"/>
+        <PARAMETER NAME="C_M_AXIS_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="S_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="M_TDATA_NUM_BYTES" VALUE="3"/>
+        <PARAMETER NAME="S_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_TDEST_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="M_TDEST_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="M_TUSER_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="S_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="S_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TREADY" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TSTRB" VALUE="0"/>
+        <PARAMETER NAME="M_HAS_TKEEP" VALUE="1"/>
+        <PARAMETER NAME="M_HAS_TLAST" VALUE="1"/>
+        <PARAMETER NAME="HAS_ACLKEN" VALUE="0"/>
+        <PARAMETER NAME="DEFAULT_TLAST" VALUE="0"/>
+        <PARAMETER NAME="TDATA_REMAP" VALUE="tdata[7:0],tdata[23:16],tdata[15:8]"/>
+        <PARAMETER NAME="TUSER_REMAP" VALUE="tuser[0:0]"/>
+        <PARAMETER NAME="TID_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TDEST_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TKEEP_REMAP" VALUE="tkeep[2:0]"/>
+        <PARAMETER NAME="TSTRB_REMAP" VALUE="1'b0"/>
+        <PARAMETER NAME="TLAST_REMAP" VALUE="tlast[0]"/>
+        <PARAMETER NAME="Component_Name" VALUE="system_axis_subset_converter_0_1"/>
+        <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
+      </PARAMETERS>
+      <PORTS>
+        <PORT CLKFREQUENCY="148500000" DIR="I" NAME="aclk" SIGIS="clk" SIGNAME="video_clk_wiz_0_disp_clk">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_clk_wiz_0" PORT="disp_clk"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="video_proc_sys_reset_0_peripheral_aresetn">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_proc_sys_reset_0" PORT="peripheral_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tvalid" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="s_axis_tready" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="23" NAME="s_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="2" NAME="s_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tkeep"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="s_axis_tlast" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tlast"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="0" NAME="s_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tuser"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tvalid" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TVALID"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="m_axis_tready" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TREADY"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="23" NAME="m_axis_tdata" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TDATA"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="2" NAME="m_axis_tkeep" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tkeep">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TKEEP"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="m_axis_tlast" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tlast">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TLAST"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="0" NAME="m_axis_tuser" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tuser">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="video_v_mix_0" PORT="s_axis_video3_TUSER"/>
+          </CONNECTIONS>
+        </PORT>
+      </PORTS>
+      <BUSINTERFACES>
+        <BUSINTERFACE BUSNAME="video_axi_vdma_h2c_M_AXIS_MM2S" NAME="S_AXIS" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/video/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="s_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="s_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="s_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="s_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="s_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="video_axis_subset_converter_1_M_AXIS" NAME="M_AXIS" TYPE="MASTER" VLNV="xilinx.com:interface:axis:1.0">
+          <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
+          <PARAMETER NAME="TDEST_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="TUSER_WIDTH" VALUE="1"/>
+          <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
+          <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
+          <PARAMETER NAME="FREQ_HZ" VALUE="148500000"/>
+          <PARAMETER NAME="PHASE" VALUE="0.0"/>
+          <PARAMETER NAME="CLK_DOMAIN" VALUE="/video/clk_wiz_0_clk_out1"/>
+          <PARAMETER NAME="LAYERED_METADATA" VALUE="undef"/>
+          <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
+          <PORTMAPS>
+            <PORTMAP LOGICAL="TDATA" PHYSICAL="m_axis_tdata"/>
+            <PORTMAP LOGICAL="TKEEP" PHYSICAL="m_axis_tkeep"/>
+            <PORTMAP LOGICAL="TLAST" PHYSICAL="m_axis_tlast"/>
+            <PORTMAP LOGICAL="TREADY" PHYSICAL="m_axis_tready"/>
+            <PORTMAP LOGICAL="TUSER" PHYSICAL="m_axis_tuser"/>
+            <PORTMAP LOGICAL="TVALID" PHYSICAL="m_axis_tvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
+      </BUSINTERFACES>
+    </MODULE>
     <MODULE COREREVISION="4" FULLNAME="/video/clk_wiz_0" HWVERSION="6.0" INSTANCE="video_clk_wiz_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="clk_wiz" VLNV="xilinx.com:ip:clk_wiz:6.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=clk_wiz;v=v6_0;d=pg065-clk-wiz.pdf"/>
@@ -18028,6 +18204,8 @@
             <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axi_mm2s_aclk"/>
             <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_aclk"/>
             <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_aclk"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="aclk"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="locked" SIGIS="undef" SIGNAME="video_clk_wiz_0_locked">
@@ -18199,6 +18377,8 @@
             <CONNECTION INSTANCE="video_axi_vdma_c2h" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="video_axis_interconnect_0_xbar" PORT="s_axi_ctrl_aresetn"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_0" PORT="aresetn"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="aresetn"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -19181,11 +19361,7 @@
             <CONNECTION INSTANCE="control_MEM_INTERCONNECT" PORT="S00_AXI_awlock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_mm_video1_AWREGION" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_awregion">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_MEM_INTERCONNECT" PORT="S00_AXI_awregion"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m_axi_mm_video1_AWREGION" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="3" NAME="m_axi_mm_video1_AWCACHE" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_awcache">
           <CONNECTIONS>
             <CONNECTION INSTANCE="control_MEM_INTERCONNECT" PORT="S00_AXI_awcache"/>
@@ -19287,11 +19463,7 @@
             <CONNECTION INSTANCE="control_MEM_INTERCONNECT" PORT="S00_AXI_arlock"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="m_axi_mm_video1_ARREGION" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_arregion">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="control_MEM_INTERCONNECT" PORT="S00_AXI_arregion"/>
-          </CONNECTIONS>
-        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m_axi_mm_video1_ARREGION" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="O" LEFT="3" NAME="m_axi_mm_video1_ARCACHE" RIGHT="0" SIGIS="undef" SIGNAME="control_MEM_INTERCONNECT_S00_AXI_arcache">
           <CONNECTIONS>
             <CONNECTION INSTANCE="control_MEM_INTERCONNECT" PORT="S00_AXI_arcache"/>
@@ -19421,35 +19593,35 @@
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_axis_video2_TID" RIGHT="0" SIGIS="undef"/>
         <PORT DIR="I" LEFT="0" NAME="s_axis_video2_TDEST" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" NAME="s_axis_video3_TVALID" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tvalid">
+        <PORT DIR="I" NAME="s_axis_video3_TVALID" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tvalid"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="m_axis_tvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="s_axis_video3_TREADY" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tready">
+        <PORT DIR="O" NAME="s_axis_video3_TREADY" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tready"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="m_axis_tready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="23" NAME="s_axis_video3_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tdata">
+        <PORT DIR="I" LEFT="23" NAME="s_axis_video3_TDATA" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tdata"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="m_axis_tdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="2" NAME="s_axis_video3_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tkeep">
+        <PORT DIR="I" LEFT="2" NAME="s_axis_video3_TKEEP" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tkeep">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tkeep"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="m_axis_tkeep"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="2" NAME="s_axis_video3_TSTRB" RIGHT="0" SIGIS="undef"/>
-        <PORT DIR="I" LEFT="0" NAME="s_axis_video3_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tuser">
+        <PORT DIR="I" LEFT="0" NAME="s_axis_video3_TUSER" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tuser">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tuser"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="m_axis_tuser"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="0" NAME="s_axis_video3_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="video_axi_vdma_h2c_m_axis_mm2s_tlast">
+        <PORT DIR="I" LEFT="0" NAME="s_axis_video3_TLAST" RIGHT="0" SIGIS="undef" SIGNAME="video_axis_subset_converter_1_m_axis_tlast">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="video_axi_vdma_h2c" PORT="m_axis_mm2s_tlast"/>
+            <CONNECTION INSTANCE="video_axis_subset_converter_1" PORT="m_axis_tlast"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="0" NAME="s_axis_video3_TID" RIGHT="0" SIGIS="undef"/>
@@ -19680,7 +19852,7 @@
             <PORTMAP LOGICAL="TVALID" PHYSICAL="s_axis_video2_TVALID"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="video_axi_vdma_h2c_M_AXIS_MM2S" NAME="s_axis_video3" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
+        <BUSINTERFACE BUSNAME="video_axis_subset_converter_1_M_AXIS" NAME="s_axis_video3" TYPE="SLAVE" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="TDATA_NUM_BYTES" VALUE="3"/>
           <PARAMETER NAME="TDEST_WIDTH" VALUE="1"/>
           <PARAMETER NAME="TID_WIDTH" VALUE="1"/>
